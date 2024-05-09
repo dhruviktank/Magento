@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<layout>
+    <adminhtml_practicetest_index>
+        <reference name="content">
+            <block type="practicetest/adminhtml_container" name="testcontainer" >
+                <block type="practicetest/adminhtml_container_form" name="form" />
+            </block>
+        </reference>
+        <reference name="left">
+            <block type="practicetest/adminhtml_container_tabs" name="testcontainer_tabs" />
+        </reference>
+    </adminhtml_practicetest_index>
+</layout>

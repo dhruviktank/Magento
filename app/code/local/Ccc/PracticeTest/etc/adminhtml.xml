@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<config>
+    <menu>
+        <practicetest translate="title" module="practicetest">
+            <title>Practice Test</title>
+            <sort_order>40</sort_order>
+            <action>adminhtml/practicetest</action>
+        </practicetest>
+    </menu>
+</config>

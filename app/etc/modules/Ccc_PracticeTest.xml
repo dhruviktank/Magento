@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Ccc_PracticeTest>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Ccc_PracticeTest>
+    </modules>
+</config>

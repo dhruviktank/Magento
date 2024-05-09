@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<config>
+    <menu>
+        <banner translate="title" module="banner">
+            <title>Banner</title>
+            <sort_order>100</sort_order>
+            <action>adminhtml/banner</action>
+        </banner>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <banner translate="title" module="banner">
+                        <title>Banner</title>
+                        <sort_order>0</sort_order>
+                        <children>
+                            <actions translate="title">
+                                <title>Actions</title>
+                                <children>
+                                    <showbutton translate="title"><title>ShowButton</title></showbutton>
+                                    <fieldlimit translate="title"><title>Show All</title></fieldlimit>
+                                </children>
+                            </actions>
+                            <field translate="title">
+                                <title>Fields</title>
+                                <children>
+                                    <name translate="title">
+                                        <title>Name</title>
+                                    </name>
+                                </children>
+                            </field>
+                        </children>
+                    </banner>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <banner>
+                                        <title>Customer Changes?</title>
+                                    </banner>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

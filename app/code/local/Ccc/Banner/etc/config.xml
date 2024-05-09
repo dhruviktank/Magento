@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Ccc_Banner>
+            <version>1.0.0.3</version>
+        </Ccc_Banner>
+    </modules>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <banner>
+                    <file>banner.xml</file>
+                </banner>
+            </updates>
+        </layout>
+    </adminhtml>
+    
+    <global>
+        <resources>
+            <banner_setup>
+                <setup>
+                    <module>Ccc_Banner</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </banner_setup>
+        </resources>
+        <models>
+            <banner>
+                <class>Ccc_Banner_Model</class>
+                <resourceModel>banner_resource</resourceModel>
+            </banner>
+            <banner_resource>
+                <class>Ccc_Banner_Model_Resource</class>
+                <entities>
+                    <banner>
+                        <table>banner</table>
+                    </banner>
+                </entities>
+            </banner_resource>
+        </models>
+        <helpers>
+            <banner>
+                <class>Ccc_Banner_Helper</class>
+            </banner>
+        </helpers>
+        <blocks>
+            <banner>
+                <class>Ccc_Banner_Block</class>
+            </banner>
+        </blocks>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <banner before="Mage_Adminhtml">Ccc_Banner_Adminhtml</banner>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <frontend>
+        <routers>
+            <banner>
+                <use>standard</use>
+                <args>
+                    <modules>
+                        <banner>Ccc_Banner</banner>
+                    </modules>
+                </args>
+                <frontName>banner</frontName>
+            </banner>
+        </routers>
+    </frontend>
+    
+</config> 

@@ -1,0 +1,9 @@
+a:5:{i:0;s:220:"Error in file: "C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Bannner\sql\bannner_setup\mysql4-install-1.0.0.php" - SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'tablename_id' doesn't exist in table";i:1;s:964:"#0 C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Model\Resource\Setup.php(644): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Model\Resource\Setup.php(421): Mage_Core_Model_Resource_Setup->_modifyResourceDb('install', '', '1.0.0')
+#2 C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Model\Resource\Setup.php(327): Mage_Core_Model_Resource_Setup->_installResourceDb('1.0.0')
+#3 C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Model\Resource\Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#4 C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Model\App.php(428): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#5 C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Model_App->_initModules()
+#6 C:\xampp\htdocs\1SBMagento\app\Mage.php(686): Mage_Core_Model_App->run(Array)
+#7 C:\xampp\htdocs\1SBMagento\index.php(83): Mage::run('', 'store')
+#8 {main}";s:3:"url";s:18:"/1SBMagento/admin/";s:11:"script_name";s:21:"/1SBMagento/index.php";s:4:"skin";s:7:"default";}

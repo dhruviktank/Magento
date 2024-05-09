@@ -1,0 +1,184 @@
+2024-04-09T12:46:43+00:00 DEBUG (7): 3
+2024-04-09T12:46:50+00:00 DEBUG (7): 3
+2024-04-09T12:46:50+00:00 DEBUG (7): 3
+2024-04-09T12:46:51+00:00 DEBUG (7): 3
+2024-04-10T07:44:33+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T07:44:33+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T08:49:09+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T08:49:09+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T08:49:12+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T08:49:12+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T09:13:40+00:00 CRIT (2): Not valid template file:frontend\base\default\template\bannerslider/view.phtml
+2024-04-10T09:13:48+00:00 CRIT (2): Not valid template file:frontend\base\default\template\bannerslider/view.phtml
+2024-04-10T11:16:53+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T11:16:53+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T11:18:50+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T11:18:50+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T11:18:57+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T11:18:57+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T11:18:57+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T11:36:54+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T11:36:54+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T11:41:09+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T11:41:09+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T11:42:05+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T11:42:05+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T11:42:05+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T12:43:40+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T12:43:40+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T12:43:40+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T12:51:48+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T12:51:48+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T12:51:48+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T12:57:22+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T12:57:22+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T12:57:22+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:15:12+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:15:12+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:15:27+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:15:27+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:15:27+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:37:36+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:37:36+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:37:36+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:38:27+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:38:27+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:38:27+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:45:16+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:45:16+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:45:16+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:45:22+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:45:22+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:45:22+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:46:21+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:46:21+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:46:21+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:46:23+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:46:23+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:46:23+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:46:25+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:46:25+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:46:25+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:50:27+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T15:50:27+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:09:33+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:09:33+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:09:33+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:09:59+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:09:59+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:09:59+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:10:17+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:10:17+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:10:17+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:10:41+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:10:41+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:10:41+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:11:17+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:11:17+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:11:17+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:11:42+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:11:42+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:11:42+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:12:14+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:12:14+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:15:24+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:15:24+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:17:16+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:17:16+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:18:29+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:18:29+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:18:51+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:18:51+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:19:53+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-10T16:19:53+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T03:48:27+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T03:48:27+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T03:48:27+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T03:50:44+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T03:50:44+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T03:50:44+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T08:10:31+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T08:10:31+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T08:10:51+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T08:10:51+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T08:16:08+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T08:16:08+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:06:15+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:06:15+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:06:50+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:06:50+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:08:44+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:08:44+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:09:44+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:09:44+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:09:53+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:09:53+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:10:14+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:10:14+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:10:22+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:10:22+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:10:27+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:10:27+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:10:57+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:10:57+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:12:01+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:12:01+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:13:10+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:13:10+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:18:56+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:18:56+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:18:56+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:18:56+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:27:06+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T09:27:06+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-04-11T11:11:48+00:00 CRIT (2): Not valid template file:adminhtml\base\default\template\banner/grid.phtml
+2024-04-12T03:55:53+00:00 CRIT (2): Not valid template file:adminhtml\base\default\template\banner/grid/grid.phtml
+2024-04-19T05:06:29+00:00 DEBUG (7): HEADERS ALREADY SENT: \<pre>[0] C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Controller\Response\Http.php:52
+[1] C:\xampp\htdocs\1SBMagento\lib\Zend\Controller\Response\Abstract.php:768
+[2] C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Controller\Response\Http.php:84
+[3] C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Controller\Varien\Front.php:184
+[4] C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Model\App.php:365
+[5] C:\xampp\htdocs\1SBMagento\app\Mage.php:686
+[6] C:\xampp\htdocs\1SBMagento\index.php:83
+\</pre>
+2024-05-03T04:35:15+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-05-03T04:35:15+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-05-03T04:35:23+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-05-03T04:35:23+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-05-03T04:35:23+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-05-03T04:35:26+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-05-03T04:35:26+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-05-03T04:36:08+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-05-03T04:36:08+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-05-03T05:55:12+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-05-03T05:55:12+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-05-03T05:55:31+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-05-03T05:55:31+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-05-03T05:55:31+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-05-08T05:57:49+00:00 DEBUG (7): HEADERS ALREADY SENT: \<pre>[0] C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Controller\Response\Http.php:52
+[1] C:\xampp\htdocs\1SBMagento\lib\Zend\Controller\Response\Abstract.php:768
+[2] C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Controller\Response\Http.php:84
+[3] C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Controller\Varien\Front.php:184
+[4] C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Model\App.php:365
+[5] C:\xampp\htdocs\1SBMagento\app\Mage.php:686
+[6] C:\xampp\htdocs\1SBMagento\index.php:83
+\</pre>
+2024-05-08T05:58:27+00:00 DEBUG (7): HEADERS ALREADY SENT: \<pre>[0] C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Controller\Response\Http.php:52
+[1] C:\xampp\htdocs\1SBMagento\lib\Zend\Controller\Response\Abstract.php:768
+[2] C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Controller\Response\Http.php:84
+[3] C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Controller\Varien\Front.php:184
+[4] C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Model\App.php:365
+[5] C:\xampp\htdocs\1SBMagento\app\Mage.php:686
+[6] C:\xampp\htdocs\1SBMagento\index.php:83
+\</pre>
+2024-05-08T07:58:17+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-05-08T07:58:17+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-05-08T10:38:23+00:00 CRIT (2): Not valid template file:frontend\base\default\template\product/info.phtml
+2024-05-08T10:38:31+00:00 CRIT (2): Not valid template file:frontend\base\default\template\product/info.phtml
+2024-05-08T10:39:06+00:00 CRIT (2): Not valid template file:frontend\base\default\template\product/info.phtml
+2024-05-08T10:39:17+00:00 CRIT (2): Not valid template file:frontend\base\default\template\product/info.phtml
+2024-05-08T10:39:35+00:00 CRIT (2): Not valid template file:frontend\base\default\template\vendorinventory/info.phtml
+2024-05-08T10:56:05+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-05-08T10:56:05+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-05-09T05:28:10+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.
+2024-05-09T05:28:10+00:00 DEBUG (7): Security problem: cms/block has not been whitelisted.

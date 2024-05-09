@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<layout>
+    <adminhtml_configuration_index>
+        <reference name="content">
+            <block type="vendorinventory/adminhtml_configuration" name="vendorinventory">
+                <block type="vendorinventory/adminhtml_configuration_grid" name="vendorinventory_grid" />
+            </block>
+        </reference>
+        <reference name="head">
+            <action method="addJs"><script>lib/jquery/jquery-1.10.2.js</script></action>
+            <action method="addJs"><script>vendorinventory/configuration.js</script></action>
+        </reference>
+    </adminhtml_configuration_index>
+</layout>

@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Ccc_PracticeTest>
+            <version>1.0.0.1</version>
+        </Ccc_PracticeTest>
+    </modules>
+    <frontend>
+        <routers>
+            <practicetest>
+                <use>standard</use>
+                <args>
+                    <modules>
+                        <practicetest before="Ccc_Banner">Ccc_PracticeTest</practicetest>
+                    </modules>
+                    <frontName>practicetest</frontName>
+                </args>
+            </practicetest>
+        </routers>
+        <layout>
+            <updates>
+                <practicetest>
+                    <file>practicetest.xml</file>
+                </practicetest>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+        <layout>
+            <updates>
+                <practicetest>
+                    <file>practicetest.xml</file>
+                </practicetest>
+            </updates>
+        </layout>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <practicetest before="Mage_Adminhtml">Ccc_PracticeTest_Adminhtml</practicetest>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <global>
+        <helpers>
+            <practicetest>
+                <class>Ccc_PracticeTest_Helper</class>
+            </practicetest>
+        </helpers>
+        <blocks>
+            <practicetest>
+                <class>Ccc_PracticeTest_Block</class>
+            </practicetest>
+        </blocks>
+    </global>
+</config>

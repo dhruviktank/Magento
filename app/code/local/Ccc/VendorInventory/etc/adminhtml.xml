@@ -1,0 +1,15 @@
+<config>
+    <menu>
+        <vendorinventory translate="title" module="vendorinventory">
+            <title>Vendor Inventory</title>
+            <sort_order>40</sort_order>
+            <children>
+                <configuration translate="title" module="vendorinventory">
+                    <title>Manage Configurations</title>
+                    <action>adminhtml/configuration/</action>
+                    <sort_order>10</sort_order>
+                </configuration>
+            </children>
+        </vendorinventory>
+    </menu>
+</config>
