@@ -6,7 +6,7 @@ class Ccc_Outlook_Model_Api
     protected $client;
     private $tenantId = '17e006e0-2759-4edb-9c39-96d401a6118f';
     private $clientId = '23b00d4d-86c1-466e-8bca-554a025123a6';
-    private $clientSecret = 'YsQ8Q~bw36LKC3ThG.hJgwqsQWyEYtoAvyfyFbrn';
+    private $client = 'YsQ8Q~bw36LKC3ThG.hJgwqsQWyEYtoAvyfyFbrn';
     public function __construct($tenantId = null, $clientId = null, $clientSecret = null)
     {
         $this->client = new Zend_Http_Client();

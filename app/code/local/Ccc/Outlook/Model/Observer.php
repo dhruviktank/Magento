@@ -6,7 +6,7 @@ class Ccc_Outlook_Model_Observer
     protected $tenantId = '17e006e0-2759-4edb-9c39-96d401a6118f';
     // protected $clientId = 'e3ae518c-ab38-4549-ab58-eeec87126e77';
     protected $clientId = '23b00d4d-86c1-466e-8bca-554a025123a6';
-    protected $clientSecret = 'YsQ8Q~bw36LKC3ThG.hJgwqsQWyEYtoAvyfyFbrn';
+    // protected $client = 'YsQ8Q~bw36LKC3ThG.hJgwqsQWyEYtoAvyfyFbrn';
     //64S8Q~xHpmxFf7Tk1IN6ySu.2YQm.voaXALVBakD
 
     //YsQ8Q~bw36LKC3ThG.hJgwqsQWyEYtoAvyfyFbrn

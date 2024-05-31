@@ -11,7 +11,7 @@ print_r($observer->saveToken($code));
 class Test
 {
     protected $clientId = '23b00d4d-86c1-466e-8bca-554a025123a6';
-    protected $clientSecret = 'YsQ8Q~bw36LKC3ThG.hJgwqsQWyEYtoAvyfyFbrn';
+    protected $clien = 'YsQ8Q~bw36LKC3ThG.hJgwqsQWyEYtoAvyfyFbrn';
     protected $accessToken;
 
     public function getAccessToken()
