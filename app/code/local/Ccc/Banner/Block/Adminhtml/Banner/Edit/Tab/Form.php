@@ -6,10 +6,10 @@ class Ccc_Banner_Block_Adminhtml_Banner_Edit_Tab_Form extends Mage_Adminhtml_Blo
     /**
      * Load Wysiwyg on demand and Prepare layout
      */
-    protected function _prepareLayout()
-    {
-        parent::_prepareLayout();
-    }
+    // protected function _prepareLayout()
+    // {
+    //     parent::_prepareLayout();
+    // }
 
     protected function _prepareForm()
     {

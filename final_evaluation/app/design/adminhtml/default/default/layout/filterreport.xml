@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<layout>
+    <adminhtml_catalog_product_index>
+        <reference name="head">
+            <action method="addJs">
+                <script>filterreport/grid.js</script>
+            </action>
+        </reference>
+    </adminhtml_catalog_product_index>
+
+    <adminhtml_filterreport_index>
+        <reference name="content">
+            <block type="filterreport/adminhtml_report" name="filter.report">
+                <block type="filterreport/adminhtml_report_grid" name="filter.grid" />
+            </block>
+        </reference>
+    </adminhtml_filterreport_index>
+    <adminhtml_report_index>
+        <reference name="content">
+            <block type="filterreport/adminhtml_filter" name="filterreport.report" >
+                <block type="filterreport/adminhtml_filter_grid" name="filterreport.filter" />
+            </block>
+        </reference>
+    </adminhtml_report_index>
+
+    <adminhtml_customer_index>
+        <reference name="head">
+            <action method="addJs">
+                <script>filterreport/grid.js</script>
+            </action>
+        </reference>
+    </adminhtml_customer_index>
+</layout>

@@ -3,7 +3,7 @@
 <config>
     <modules>
         <Ccc_Banner>
-            <version>1.0.0.3</version>
+            <version>1.0.0.4</version>
         </Ccc_Banner>
     </modules>
 
@@ -16,12 +16,13 @@
             </updates>
         </layout>
     </adminhtml>
-    
+
     <global>
         <resources>
             <banner_setup>
                 <setup>
                     <module>Ccc_Banner</module>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
                 </setup>
                 <connection>
                     <use>core_setup</use>
@@ -52,6 +53,45 @@
                 <class>Ccc_Banner_Block</class>
             </banner>
         </blocks>
+        <events>
+            <admin_system_config_changed_section_banner>
+                <observers>
+                    <banner_config_observer>
+                        <type>singleton</type>
+                        <class>banner/observer</class>
+                        <method>bannerUpdated</method>
+                    </banner_config_observer>
+                </observers>
+            </admin_system_config_changed_section_banner>
+
+            <admin_system_config_changed_section_advanced>
+                <observers>
+                    <banner_config_observer>
+                        <type>singleton</type>
+                        <class>banner/observer</class>
+                        <method>advancedUpdated</method>
+                    </banner_config_observer>
+                </observers>
+            </admin_system_config_changed_section_advanced>
+            <sales_order_place_after>
+                <observers>
+                    <ccc_banner_order_observer>
+                        <type>singleton</type>
+                        <class>banner/observer</class>
+                        <method>dispatchCustomEvent</method>
+                    </ccc_banner_order_observer>
+                </observers>
+            </sales_order_place_after>
+            <custom_order_event>
+                <observers>
+                    <ccc_banner_custom_event_observer>
+                        <type>singleton</type>
+                        <class>banner/observer</class>
+                        <method>handleCustomEvent</method>
+                    </ccc_banner_custom_event_observer>
+                </observers>
+            </custom_order_event>
+        </events>
     </global>
     <admin>
         <routers>
@@ -77,5 +117,5 @@
             </banner>
         </routers>
     </frontend>
-    
+
 </config> 

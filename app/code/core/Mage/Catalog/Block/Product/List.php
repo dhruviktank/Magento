@@ -89,7 +89,6 @@ class Mage_Catalog_Block_Product_List extends Mage_Catalog_Block_Product_Abstrac
                 $layer->setCurrentCategory($origCategory);
             }
         }
-
         return $this->_productCollection;
     }
 

@@ -40,7 +40,7 @@
             <adminhtml>
                 <args>
                     <modules>
-                        <practicetest before="Mage_Adminhtml">Ccc_PracticeTest_Adminhtml</practicetest>
+                        <practicetest before="Ccc_Banner_Adminhtml">Ccc_PracticeTest_Adminhtml</practicetest>
                     </modules>
                 </args>
             </adminhtml>

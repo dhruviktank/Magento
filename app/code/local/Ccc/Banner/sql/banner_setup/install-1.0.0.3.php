@@ -4,9 +4,6 @@ $installer = $this;
 
 $installer->startSetup();
 
-/**
- * Create table 'ccc/banner'
- */
 $table = $installer->getConnection()
     ->newTable($installer->getTable('banner'))
     ->addColumn('banner_id', Varien_Db_Ddl_Table::TYPE_SMALLINT, null, array(

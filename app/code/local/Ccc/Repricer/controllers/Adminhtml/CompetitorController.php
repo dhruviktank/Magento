@@ -178,4 +178,27 @@ class Ccc_Repricer_Adminhtml_CompetitorController extends Mage_Adminhtml_Control
 
         $this->_redirect('*/*/index');
     }
+    protected function _isAllowed()
+    {
+        $action = strtolower($this->getRequest()->getActionName());
+        switch ($action) {
+            case 'new':
+                $aclResource = 'catalog/repricer/competitor/actions/new';
+                break;
+            case 'edit':
+                $aclResource = 'catalog/repricer/competitor/actions/edit';
+                break;
+            case 'save':
+                $aclResource = 'catalog/repricer/competitor/actions/save';
+                break;
+            case 'delete':
+                $aclResource = 'catalog/repricer/competitor/actions/delete';
+                break;
+            default:
+                $aclResource = 'catalog/repricer/competitor/actions/index';
+                break;
+
+        }
+        return Mage::getSingleton('admin/session')->isAllowed($aclResource);
+    }
 }

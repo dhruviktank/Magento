@@ -453,7 +453,6 @@ varienGridMassaction.prototype = {
         this.getOldCallback('init_row')(grid, row);
     },
     onGridRowClick: function(grid, evt) {
-
         var tdElement = Event.findElement(evt, 'td');
         var trElement = Event.findElement(evt, 'tr');
 

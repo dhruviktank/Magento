@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Ccc_FilterReport>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Ccc_FilterReport>
+    </modules>
+</config>

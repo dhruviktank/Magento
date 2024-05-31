@@ -524,7 +524,7 @@ class Mage_Adminhtml_Block_Widget_Grid extends Mage_Adminhtml_Block_Widget
             $columnId = $this->getParam($this->getVarNameSort(), $this->_defaultSort);
             $dir      = $this->getParam($this->getVarNameDir(), $this->_defaultDir);
             $filter   = $this->getParam($this->getVarNameFilter(), null);
-
+            
             if (is_null($filter)) {
                 $filter = $this->_defaultFilter;
             }

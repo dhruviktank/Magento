@@ -1,0 +1,19 @@
+<?php //echo get_called_class(); ?>
+<?php $a = Mage::getUrl("*/*/save"); ?>
+<?php $formData = json_encode($this->getCollectionData()); ?>
+
+<div class="configuration_form"></div>
+
+<script>
+document.observe("dom:loaded", function() {
+    var config = new salesConfig("<?php echo $a; ?>", '<?php print_r($formData); ?>');
+
+    // $$("#configuration_form").invoke("observe", "submit", function(event) {
+    //     event.preventDefault();
+    //     // Redirect to the league tab
+    //     // window.location.href = "#league";
+    // });
+
+    // var createCard = new createCards( /* cardData, usersInLeague */ );
+});
+</script>

@@ -38,4 +38,35 @@ $table = $installer->getConnection()
     ->setComment('Inventory Items');
 
 $installer->getConnection()->createTable($table);
+
+$entityTypeId ="catalog_product";
+$attributeCode ="brand";
+$attributeLabel ="Brand";
+
+$data = [
+    "type" => 'int',
+    "input" => 'select',
+    "label" => $attributeLabel,
+    "source" => "eav/entity_attribute_source_table",
+    "required" => false,
+    "user_defined" => true,
+    "unique" => false,
+    "global" => Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_GLOBAL,
+    "visible" => true,
+    "searchable" => true,
+    "filterable" => true,
+    "comparable" => true,
+    "visible_on_front" => true,
+    "used_in_product_listing" => true,
+    "option" => [
+        'values' => [
+            'Prada',
+            'Louie Vitton',
+            'Rado',
+            'Gucci'
+        ]
+    ]
+];
+$installer->addAttribute($entityTypeId,$attributeCode,$data);
+
 $installer->endSetup();

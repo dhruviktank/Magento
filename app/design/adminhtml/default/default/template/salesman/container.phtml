@@ -1,0 +1,141 @@
+<style>
+.multiselect {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    width: 200px;
+}
+
+.selectBox {
+    position: relative;
+    display: block;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.selectBox select {
+    width: 100%;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.overSelect {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.scalable {
+    float: right;
+}
+
+.scalable task {
+    float: right;
+    margin-right: 10px;
+}
+
+#checkboxes {
+    display: none;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#checkboxes label {
+    display: block;
+    padding: 8px 10px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#checkboxes label:hover {
+    background-color: #f9f9f9;
+}
+</style>
+
+<div class="content-header">
+    <table cellspacing="0">
+        <tr>
+            <td style="<?php echo $this->getHeaderWidth() ?>"><?php echo $this->getHeaderHtml() ?></td>
+        </tr>
+    </table>
+</div>
+
+<div>
+
+    <?php if(Mage::getSingleton('admin/session')->isAllowed('salesman/commission/actions/from')){ ?>
+    <label for="date_from">
+        <b><?php echo $this->__('From:') ?></b>
+    </label>
+    <input type="date" id="filter_date_from" name="created_at[from]" class="input-text" />
+    <?php } ?>
+    <label for="date_to">
+        <b style="margin-left: 10px;"><?php echo $this->__('To:') ?></b>
+    </label>
+    <input type="date" id="filter_date_to" name="created_at[to]" class="input-text" />
+
+    <b style="margin-left: 10px;"><?php echo $this->__('Salesman:') ?></b>
+    <div class="multiselect" style="display: inline-block; width: 10%;">
+        <div class="selectBox" onclick="showCheckboxes()">
+            <?php $collection = Mage::getResourceModel('admin/user_collection'); ?>
+            <select id="salesman_name_filter" name="username">
+                <option>Select Salesman</option>
+            </select>
+            <div class="overSelect"></div>
+        </div>
+        <div id="checkboxes">
+            <label for="select-all">
+                <input type="checkbox" id="select-all" name="username" />Select all</label>
+            <?php foreach ($collection as $item): ?>
+            <label for="<?php echo $item->getUsername(); ?>">
+                <input type="checkbox" id="<?php echo $item->getUsername(); ?>" name="username"
+                    value="<?php echo $item->getUsername() ?>" /><?php echo $item->getUsername() ?></label>
+            <?php endforeach; ?>
+        </div>
+    </div>
+    <br>
+</div>
+<button id="id_d601ae8e4cb58942bcd7ddc9060ff6ea" title="Reset Filter" type="button" class="scalable "
+    onclick="salesman_commission_gridJsObject.resetFilter()"><span><span><span>Reset
+                Filter</span></span></span></button>
+<button id="id_63d2e8c6d30ed67759a5bb28e2d75df5" title="Search" type="button" class="scalable task"
+    onclick="salesman_commission_gridJsObject.doFilter()"
+    style="margin-right: 5px;"><span><span><span>Search</span></span></span></button>
+<br>
+<script>
+var expanded = false;
+
+function showCheckboxes() {
+    var checkboxes = document.getElementById("checkboxes");
+    if (!expanded) {
+        checkboxes.style.display = "block";
+        expanded = true;
+    } else {
+        checkboxes.style.display = "none";
+        expanded = false;
+    }
+}
+document.getElementById("select-all").addEventListener("change", function() {
+    var checkboxes = document.querySelectorAll("#checkboxes input[type='checkbox']");
+    checkboxes.forEach(function(checkbox) {
+        checkbox.checked = event.target.checked;
+    });
+});
+</script>
+
+<div>
+    <?php echo $this->getChildHtml('salesman_report_summary') ?>
+</div>

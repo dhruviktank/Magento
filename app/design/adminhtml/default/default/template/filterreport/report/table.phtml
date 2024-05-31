@@ -1,0 +1,22 @@
+<?php $reports = $this->getReports(); ?>
+
+<?php if (sizeof($reports) > 0): ?>
+    <table class="report-table">
+        <thead>
+            <th>ID</th>
+            <th>Report Type</th>
+            <th>Filter Data</th>
+        </thead>
+        <tbody>
+            <?php foreach ($reports as $_report): ?>
+                <tr>
+                    <td><?php echo $_report->getId() ?></td>
+                    <td><?php echo ($_report->getReportType() == 1) ? 'Product' : 'Customer'; ?></td>
+                    <td><?php echo $_report->getFilterData() ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+<?php else: ?>
+    <p> No reports found</p>
+<?php endif; ?>

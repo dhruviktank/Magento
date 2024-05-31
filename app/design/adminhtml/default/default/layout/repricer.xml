@@ -19,21 +19,25 @@
             <action method="addJs">
                 <script>lib/jquery/jquery-1.10.2.js</script>
             </action>
-            <!-- <action method="addJs">
-                    <script>prototype/prototype.js</script>
-            </action> -->
             <action method="addJs">
-                <script>repricer/edit.js</script>
+                <script>repricer/matching.js</script>
             </action>
-            <!-- <action method="addJs">
-                <script>repricer/edit2.js</script>
-            </action> -->
-
+            <action method="addJs">
+                <script>repricer/mass-action.js</script>
+            </action>
         </reference>
         <reference name="content">
-            <block type="repricer/adminhtml_matching" name="matching" />
+            <block type="repricer/adminhtml_matching" name="container">
+                <block type="repricer/adminhtml_matching_grid" name="matching_grid" />
+            </block>
+            <!-- <block type="repricer/adminhtml_matching" name="container" template="repricer/container.phtml">
+                <block type="repricer/adminhtml_matching_grid" name="matching_grid" />
+            </block> -->
         </reference>
     </adminhtml_matching_index>
+    <adminhtml_matching_new>
+        <update handle="repricer/adminthtml_matching_edit" />
+    </adminhtml_matching_new>
     <adminhtml_matching_edit>
         <reference name="content">
             <block type="repricer/adminhtml_matching_edit" name="matching_edit" />

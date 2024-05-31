@@ -1,0 +1,18 @@
+<?php $groups = $this->getUsersInLeague(); ?>
+<?php $cardData = json_encode($this->CreateCollection()); ?>
+<?php $rank = $this->getRank(); ?>
+<?php $url = $this->getUrl('*/*/data'); ?>
+
+<div class="submitData"></div>
+<div class=" cards" style="display: ruby-text;"></div>
+
+
+<script>
+var sendDataUrl = '<?php echo $this->getUrl('*/*/data'); ?>';
+var bonusArrayString = '<?php echo Mage::getStoreConfig('salesman/bonus/amount'); ?>';
+var userInLeague = '<?php echo $groups; ?>';
+document.observe("dom:loaded", function() {
+    var cards = new createCards('<?php print_r($cardData); ?>', '<?php echo $groups; ?>',
+        '<?php echo $url; ?>', '<?php echo $rank ?>');
+})
+</script>

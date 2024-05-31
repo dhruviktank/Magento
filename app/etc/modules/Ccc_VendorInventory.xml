@@ -2,9 +2,9 @@
 
 <config>
     <modules>
-        <Ccc_VendorInventory>
+        <!-- <Ccc_VendorInventory>
             <active>true</active>
             <codePool>local</codePool>
-        </Ccc_VendorInventory>
+        </Ccc_VendorInventory> -->
     </modules>
 </config>

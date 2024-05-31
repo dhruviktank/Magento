@@ -67,7 +67,6 @@ class Mage_Adminhtml_Block_System_Config_Form_Field
         $namePrefix = preg_replace('#\[value\](\[\])?$#', '', $element->getName());
 
         $options = $element->getValues();
-
         $addInheritCheckbox = false;
         if ($element->getCanUseWebsiteValue()) {
             $addInheritCheckbox = true;

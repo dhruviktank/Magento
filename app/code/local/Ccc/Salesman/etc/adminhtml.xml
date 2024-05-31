@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+
+<config>
+
+    <menu>
+        <salesman translate="title" module="salesman">
+            <title>Salesman</title>
+            <sort_order>100</sort_order>
+            <children>
+                <metric module="salesman">
+                    <title>Commission Metric</title>
+                    <sort_order>0</sort_order>
+                    <action>adminhtml/metric</action>
+                </metric>
+                <commission module="salesman">
+                    <title>Commission Report</title>
+                    <sort_order>20</sort_order>
+                    <action>adminhtml/report</action>
+                </commission>
+                <rank module="salesman">
+                    <title>Salesman Rank</title>
+                    <sort_order>20</sort_order>
+                    <action>adminhtml/rank</action>
+                </rank>
+                <bonus module="salesman">
+                    <title>Bonus Configuration</title>
+                    <sort_order>20</sort_order>
+                    <action>adminhtml/bonus</action>
+                </bonus>
+            </children>
+        </salesman>
+    </menu>
+
+
+    <acl>
+        <resources>
+            <all>
+                    <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <salesman translate="title" module="salesman">
+                        <title>Salesman</title>
+                        <sort_order>60</sort_order>
+                        <children>
+                            <commission module="salesman">
+                                <title>Commission Report</title>
+                                <sort_order>20</sort_order>
+                                <children>
+                                    <actions translate="title">
+                                        <title>Actions</title>
+                                        <children>
+                                            <index translate="title"><title>Index</title></index>
+                                            <from translate="title"><title>From</title></from>
+                                            <to translate="title"><title>To</title></to>
+                                            <salesman translate="title"><title>Salesman</title></salesman>
+                                        </children>
+                                    </actions>        
+                                </children>
+                            </commission>
+                        </children>
+                    </salesman>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <salesman>
+                                        <title>Bonus Changes</title>
+                                    </salesman>
+                                    <salesmann>
+                                        <title>Assign Percentage</title>
+                                    </salesmann>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+
+</config>

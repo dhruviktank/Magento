@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+
+<config>
+    <menu>
+        <filterreport translate="title" module="filterreport">
+            <title>Filter Report</title>
+            <sort_order>30</sort_order>
+
+            <children>
+                <filterreport translate="title" module="filterreport">
+                    <title>Manage Reports</title>
+                    <action>adminhtml/filterreport</action>
+                    <sort_order>10</sort_order>
+                </filterreport>
+                <!-- <filterreport_show translate="title" module="filterreport">
+                    <title>Show Reports</title>
+                    <action>adminhtml/report</action>
+                    <sort_order>10</sort_order>
+                </filterreport_show> -->
+            </children>
+        </filterreport>
+        <system>
+            <children>
+                <reportmanager translate="title" module="filterreport">
+                    <title>Report Manager</title>
+                    <action>adminhtml/filterreport/view</action>
+                </reportmanager>
+            </children>
+        </system>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <filterreport translate="title" module="filterreport">
+                        <title>Filter Grid</title>
+                        <sort_order>1000</sort_order>
+                        <children>
+                            <filterreport translate="title">
+                                <title>Show Grid</title>
+                            </filterreport>
+                        </children>
+                    </filterreport>
+                    <system>
+                        <children>
+                            <reportmanager translate="title" module="filterreport">
+                                <title>Filter Report</title>
+                                <sort_order>0</sort_order>
+                            </reportmanager>
+                            <config>
+                                <children>
+                                    <filterreport>
+                                        <title>Filter Report</title>
+                                    </filterreport>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

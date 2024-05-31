@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Magestore_Bannerslider>
+        <!-- <Magestore_Bannerslider>
             <active>true</active>
             <codePool>community</codePool>
-        </Magestore_Bannerslider>
+        </Magestore_Bannerslider> -->
     </modules>
 </config> 

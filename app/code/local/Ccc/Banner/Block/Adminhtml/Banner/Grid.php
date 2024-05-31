@@ -10,17 +10,21 @@ class Ccc_Banner_Block_Adminhtml_Banner_Grid extends Mage_Adminhtml_Block_Widget
 		$this->setId('bannerGrid');
 		$this->setDefaultSort('name');
 		$this->setDefaultDir('ASC');
+		// $this->setUseAjax(true);
 	}
 
 	protected function _prepareCollection()
 	{
 		$collection = Mage::getModel('banner/banner')->getCollection();
-		/* @var $collection Mage_Cms_Model_Mysql4_Block_Collection */
+		/** 
+		 * @var Mage_Cms_Model_Mysql4_Block_Collection $collection  
+		*/
 		if (!Mage::getSingleton('admin/session')->isAllowed('banner/actions/fieldlimit')) {
-			$collection->getSelect()->limit(100);
+			$collection->getSelect()->limit(2);
 			$this->setCollection($collection);
 			$this->getCollection()->load();
 		}
+		// $collection->getSelect()->joinFull();
 		$collection->addFieldToSelect("*");
 		$this->setCollection($collection);
 		return parent::_prepareCollection();
@@ -58,6 +62,7 @@ class Ccc_Banner_Block_Adminhtml_Banner_Grid extends Mage_Adminhtml_Block_Widget
 				'header' => Mage::helper('banner')->__('Banner Name'),
 				'align' => 'left',
 				'index' => 'name',
+				'column_css_class' => 'editable',
 				'is_allowed' => $isAllowed
 			)
 		);
@@ -76,6 +81,7 @@ class Ccc_Banner_Block_Adminhtml_Banner_Grid extends Mage_Adminhtml_Block_Widget
 			array(
 				'header' => Mage::helper('banner')->__('Content'),
 				'index' => 'content',
+				'column_css_class' => 'editable',
 				'type' => 'text',
 			)
 		);
@@ -100,6 +106,28 @@ class Ccc_Banner_Block_Adminhtml_Banner_Grid extends Mage_Adminhtml_Block_Widget
 				)
 			)
 		);
+		$this->addColumn(
+            'edit',
+            array(
+                'header' => Mage::helper('banner')->__('Edit'),
+                'align' => 'left',
+                // 'type' => 'action',
+                'getter' => 'getId',
+                // 'actions' => array(
+                //     array(
+                //         'caption' => Mage::helper('banner')->__('Edit'),
+                //         'url' => array(
+                //             'base' => '#',
+                //         ),
+                //         // 'field' => 'contact_id'
+                //     )
+                // ),
+                'filter' => false,
+                'sortable' => false,
+                'index' => 'edit',
+                'renderer' => 'Ccc_Banner_Block_Adminhtml_Banner_Grid_Renderer_Row',
+            )
+        );
 
 		return parent::_prepareColumns();
 	}
@@ -144,5 +172,9 @@ class Ccc_Banner_Block_Adminhtml_Banner_Grid extends Mage_Adminhtml_Block_Widget
 	{
 		return $this->getUrl('*/*/edit', array('banner_id' => $row->getId()));
 	}
+
+	// public function getGridUrl(){
+	// 	return $this->getUrl('*/*/grid', array('_current' => true));
+	// }
 
 }

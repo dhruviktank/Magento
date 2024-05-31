@@ -10,13 +10,13 @@ class Ccc_Repricer_Block_Adminhtml_Matching_Edit extends Mage_Adminhtml_Block_Wi
         parent::__construct();
 
         $this->_updateButton('save', 'label', Mage::helper('repricer')->__('Save Repricer'));
-        $this->removeButton('delete');
+        // $this->_updateButton('delete', 'label', Mage::helper('repricer')->__('Delete Repricer'));
 
-        // $this->_addButton('saveandcontinue', array(
-        //     'label' => Mage::helper('adminhtml')->__('Save and Continue Edit'),
-        //     'onclick' => 'saveAndContinueEdit()',
-        //     'class' => 'save',
-        // ), -100);
+        $this->_addButton('saveandcontinue', array(
+            'label' => Mage::helper('adminhtml')->__('Save and Continue Edit'),
+            'onclick' => 'saveAndContinueEdit()',
+            'class' => 'save',
+        ), -100);
 
         $this->_formScripts[] = "
             function toggleEditor() {

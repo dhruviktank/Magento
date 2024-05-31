@@ -34,7 +34,7 @@ $table = $installer->getConnection()
     ->addColumn('isb_column', Varien_Db_Ddl_Table::TYPE_VARCHAR, 255, array(
         'nullable' => true
     ), 'ISB Column')
-    ->addColumn('brand_Column_configuration', Varien_Db_Ddl_Table::TYPE_TEXT, null, array(
+    ->addColumn('brand_column_configuration', Varien_Db_Ddl_Table::TYPE_TEXT, null, array(
         'nullable' => true
     ), 'Brand Column Configuration')
     ->setComment('Inventory Column Configuration');

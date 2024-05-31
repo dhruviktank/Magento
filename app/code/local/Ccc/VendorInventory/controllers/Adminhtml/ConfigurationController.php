@@ -48,6 +48,7 @@ class Ccc_VendorInventory_Adminhtml_ConfigurationController extends Mage_Adminht
         $data = $collection->addFieldtoFilter('main_table.brand_id', $brandId)->getFirstItem();
         if ($data->getBrandHeaders()) {
             $response['headers'] = explode(',', $data->getBrandHeaders());
+            // $response['headers'] = $data->getBrandHeaders();
             $response['config'] = json_decode($data->getColumnConfig());
             $response['configId'] = (int) $data->getConfigColumnId();
         }
@@ -68,10 +69,11 @@ class Ccc_VendorInventory_Adminhtml_ConfigurationController extends Mage_Adminht
                 ->save();
         } else {
             try {
+                // print_r(($postData)); die;
                 $response = [];
                 $data = [
                     'brand_id' => $brandId, 
-                    'headers' => $postData['headers']
+                    'headers' => implode(",", json_decode($postData['headers']))
                 ];
                 $brandConfig = Mage::getModel('vendorinventory/configuration')->setData($data)->save();
                 $data = [

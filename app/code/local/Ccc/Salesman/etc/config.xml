@@ -1,0 +1,148 @@
+<config>
+    
+    <modules>
+        <Ccc_Salesman>
+            <version>1.6.0.0.7</version>
+        </Ccc_Salesman>
+    </modules>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Ccc_Salesman before="Mage_Adminhtml">Ccc_Salesman_Adminhtml</Ccc_Salesman>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers> 
+    </admin>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <salesman>
+                    <file>salesman.xml</file>
+                </salesman>
+            </updates>
+        </layout>
+    </adminhtml>
+    
+    <global>
+
+        <events>
+            <sales_order_place_after>
+                <observers>
+                    <salesman>
+                        <type>singleton</type>
+                        <class>Ccc_Salesman_Model_Commission_Observer</class>
+                        <method>addCommissionToOrder</method>
+                    </salesman>
+                </observers>
+            </sales_order_place_after>
+
+            <order_cancel_after>
+                <observers>
+                    <salesman>
+                        <type>singleton</type>
+                        <class>Ccc_Salesman_Model_Commission_Observer</class>
+                        <method>cancelOrderCommission</method>
+                    </salesman>
+                </observers>
+            </order_cancel_after>
+
+            <admin_user_save_after>
+                <observers>
+                    <salesman>
+                        <type>singleton</type>
+                        <class>Ccc_Salesman_Model_Observer</class>
+                        <method>assignPercentage</method>
+                    </salesman>
+                </observers>
+            </admin_user_save_after>
+        </events>
+
+        <helpers>
+            <salesman>
+                <class>Ccc_Salesman_Helper</class>
+            </salesman>
+        </helpers>
+
+        <models>
+            <salesman>
+                <class>Ccc_Salesman_Model</class>
+                <resourceModel>salesman_resource</resourceModel>
+            </salesman>
+            <salesman_resource>
+                <class>Ccc_Salesman_Model_Resource</class>
+                <entities>
+                    <metric>
+                        <table>salesman_metric_percentage</table>
+                    </metric>
+                    <commission>
+                        <table>salesman_order_commission</table>
+                    </commission>
+                    <salesman_bonus_configuration>
+                        <table>salesman_bonus_configuration</table>
+                    </salesman_bonus_configuration>
+                    <salesman_bonus_league_user>
+                        <table>salesman_bonus_league_user</table>
+                    </salesman_bonus_league_user>
+                    <salesman_bonus_league>
+                        <table>salesman_bonus_league</table>
+                    </salesman_bonus_league>
+                </entities>
+            </salesman_resource>
+        </models>
+
+        <resources>
+            <salesman_setup>
+                <setup>
+                    <module>Ccc_Salesman</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </salesman_setup>
+        </resources>
+
+        <blocks>
+            <salesman>
+                <class>Ccc_Salesman_Block</class>
+            </salesman>
+        </blocks>
+
+    </global>
+
+    <crontab>
+        <jobs>
+            <salesman_rank>
+                <schedule>
+                    <cron_expr>*/1 * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>salesman/observer::saveNewData</model>
+                </run>
+            </salesman_rank>
+
+            <before_end_date>
+                <schedule>
+                    <cron_expr>*/1    </cron_expr>
+                </schedule>
+                <run>
+                    <model>salesman/scheduler::saveBefore</model>
+                </run>
+            </before_end_date>
+
+            <after_end_date>
+                <schedule>
+                    <cron_expr>1  /1  </cron_expr>
+                </schedule>
+                <run>
+                    <model>salesman/scheduler::saveAfterEndDate</model>
+                </run>
+            </after_end_date>
+        </jobs>
+    </crontab>
+
+</config>

@@ -23,4 +23,77 @@
             </children>
         </catalog>
     </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                <catalog>
+                    <children>
+                        <repricer translate="title" module="repricer">
+                            <title>Repricer</title>
+                            <children>
+                                <repricer translate="title">
+                                    <title>Manage Repricer</title>
+                                    <children>
+                                        <actions translate="title">
+                                            <title>Actions</title>
+                                            <children>
+                                                <index translate="title">
+                                                    <title>Index</title>
+                                                </index>
+                                                <edit translate="title">
+                                                    <title>Edit</title>
+                                                </edit>
+                                                <grid translate="title">
+                                                    <title>Grid</title>
+                                                </grid>
+                                            </children>
+                                        </actions>
+                                    </children>
+                                </repricer>
+                                <competitor translate="title">
+                                    <title>Manage Competitor</title>
+                                    <children>
+                                        <actions translate="title">
+                                            <title>Actions</title>
+                                            <children>
+                                                <index translate="title">
+                                                    <title>Index</title>
+                                                </index>
+                                                <new translate="title">
+                                                    <title>New</title>
+                                                </new>
+                                                <save translate="title">
+                                                    <title>Save</title>
+                                                </save>
+                                                <edit translate="title">
+                                                    <title>Edit</title>
+                                                </edit>
+                                                <delete translate="title">
+                                                    <title>Delete</title>
+                                                </delete>
+                                            </children>
+                                        </actions>
+                                    </children>
+                                </competitor>
+                            </children>
+                        </repricer>
+                    </children>
+                </catalog>
+                <system>
+                    <children>
+                        <config>
+                            <children>
+                               <repricer module='repricer' translate='title'>
+                                <title>abc</title>
+                                <sort_order>100</sort_order>
+                                </repricer>
+                            </children>
+                        </config>
+                    </children>
+                </system>
+            </children>
+            </admin>
+        </resources>
+    </acl>
 </config>

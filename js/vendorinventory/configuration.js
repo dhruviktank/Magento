@@ -334,10 +334,12 @@ Configuration.prototype = {
         var self = this;
         var configurationArray = this.prepareArray();
         var saveUrl = this.saveActionUrl;
+
         var data = {
             'configuration': JSON.stringify(configurationArray),
-            'headers': this.headers,
+            'headers': JSON.stringify(this.headers),
         }
+        console.log(data);
         if (self.configId != false) {
             data.configId = self.configId;
         }

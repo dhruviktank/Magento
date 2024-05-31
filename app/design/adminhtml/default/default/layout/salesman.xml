@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+
+<layout>
+
+	<adminhtml_metric_index>
+		<reference name="content">
+            <block type="salesman/adminhtml_metric" name="salesman_metric"></block>
+        </reference>
+	</adminhtml_metric_index>
+
+	<adminhtml_metric_new>
+		<update handle="adminhtml_metric_edit" />
+	</adminhtml_metric_new>
+
+	<adminhtml_metric_edit>
+		<reference name="content">
+			<block type="salesman/adminhtml_metric_edit" name="metric_edit"/>
+		</reference>
+	</adminhtml_metric_edit>
+
+	<adminhtml_report_index>
+		<reference name="content">
+			<block type="salesman/adminhtml_report" name="salesman_report" template="salesman/container.phtml">
+				<block type="salesman/adminhtml_report_grid" name="salesman_report_summary"></block>
+			</block>
+		</reference>
+		<reference name="head">
+            <action method="addJs">
+                <script>salesman/grid.js</script>
+            </action>
+        </reference>
+	</adminhtml_report_index>
+
+	<adminhtml_rank_index>
+		<reference name="content">
+            <block type="salesman/adminhtml_rank" name="salesman_rank"></block>
+        </reference>
+	</adminhtml_rank_index>
+
+	<adminhtml_bonus_index>
+		<reference name="content">
+			<block type="salesman/adminhtml_bonus" name="bonus_grid"></block>
+		</reference>
+	</adminhtml_bonus_index>
+
+	<adminhtml_bonus_edit>
+		<update handle="adminhtml_bonus_configuration" />
+	</adminhtml_bonus_edit>
+
+	<adminhtml_bonus_new>
+		<update handle="adminhtml_bonus_configuration" />
+	</adminhtml_bonus_new>
+
+	<adminhtml_bonus_configuration>
+        <reference name="head">
+            <action method="addJs">
+                <src>lib/jquery/jquery-1.12.1.min.js</src>
+            </action>
+            <action method="addJs">
+                <src>lib/jquery/noconflict.js</src>
+            </action>
+            <action method="addJs">
+                <file>salesman/bonus/configuration.js</file>
+            </action>
+        </reference>
+        <reference name="left">
+            <block type="salesman/adminhtml_bonus_tabs" name="bonus_tabs"></block>
+        </reference>
+    </adminhtml_bonus_configuration>
+
+    <adminhtml_bonus_league>
+        <update handle="adminhtml_bonus_configuration" />
+    </adminhtml_bonus_league>
+
+</layout>

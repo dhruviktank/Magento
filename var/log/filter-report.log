@@ -1,0 +1,33 @@
+2024-05-22T08:52:57+00:00 DEBUG (7): called
+2024-05-22T17:31:54+00:00 DEBUG (7): 0
+2024-05-22T17:31:54+00:00 DEBUG (7): 0
+2024-05-22T17:48:54+00:00 DEBUG (7): Current Sold Count: 1
+2024-05-22T17:48:54+00:00 DEBUG (7): Updated Sold Count: 3
+2024-05-22T17:48:54+00:00 DEBUG (7): Current Sold Count: 1
+2024-05-22T17:48:54+00:00 DEBUG (7): Updated Sold Count: 3
+2024-05-22T17:48:54+00:00 DEBUG (7): Current Sold Count: 0
+2024-05-22T17:48:54+00:00 DEBUG (7): Updated Sold Count: 2
+2024-05-22T17:48:54+00:00 DEBUG (7): Current Sold Count: 1
+2024-05-22T17:48:54+00:00 DEBUG (7): Updated Sold Count: 2
+2024-05-22T18:11:43+00:00 DEBUG (7): Current Sold Count: 3
+2024-05-22T18:11:43+00:00 DEBUG (7): Updated Sold Count: 1
+2024-05-22T18:11:43+00:00 DEBUG (7): Current Sold Count: 3
+2024-05-22T18:11:43+00:00 DEBUG (7): Updated Sold Count: 1
+2024-05-22T18:11:43+00:00 DEBUG (7): Current Sold Count: 2
+2024-05-22T18:11:43+00:00 DEBUG (7): Updated Sold Count: 0
+2024-05-22T18:11:43+00:00 DEBUG (7): Current Sold Count: 2
+2024-05-22T18:11:43+00:00 DEBUG (7): Updated Sold Count: 1
+2024-05-23T04:37:25+00:00 DEBUG (7): Current Sold Count: 0
+2024-05-23T04:37:25+00:00 DEBUG (7): Updated Sold Count: 6
+2024-05-23T04:43:08+00:00 DEBUG (7): Current Sold Count: 1
+2024-05-23T04:43:08+00:00 DEBUG (7): Updated Sold Count: 6
+2024-05-23T04:43:08+00:00 DEBUG (7): Current Sold Count: 1
+2024-05-23T04:43:08+00:00 DEBUG (7): Updated Sold Count: 6
+2024-05-23T04:43:47+00:00 DEBUG (7): Current Sold Count: 6
+2024-05-23T04:43:47+00:00 DEBUG (7): Updated Sold Count: 1
+2024-05-23T04:43:47+00:00 DEBUG (7): Current Sold Count: 6
+2024-05-23T04:43:47+00:00 DEBUG (7): Updated Sold Count: 1
+2024-05-27T05:32:20+00:00 DEBUG (7): Current Sold Count: 0
+2024-05-27T05:32:20+00:00 DEBUG (7): Updated Sold Count: 5
+2024-05-27T05:32:20+00:00 DEBUG (7): Current Sold Count: 0
+2024-05-27T05:32:20+00:00 DEBUG (7): Updated Sold Count: 5

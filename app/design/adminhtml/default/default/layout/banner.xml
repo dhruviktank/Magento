@@ -3,11 +3,14 @@
 <layout>
 	<adminhtml_banner_index>
 		<reference name="content">
+            <!-- <block type="banner/adminhtml_banner_report" template="banner/report.phtml">
+            </block> -->
             <block type="banner/adminhtml_banner" name="banner" template="banner/grid.phtml">
-                <!-- <block type="banner/adminhtml_banner_grid" name="grid" template="banner/grid/grid.phtml" /> -->
+                <block type="banner/adminhtml_banner_grid" name="grid" template="banner/grid/grid.phtml" />
             </block>
         </reference>
         <reference name="head">
+            <action method="addJs"><script>lib/jquery/jquery-1.10.2.js</script></action>
             <action method="addJs">
                 <script>banner/grid.js</script>
             </action>
@@ -27,6 +30,7 @@
         <reference name="left">
             <block type="banner/adminhtml_banner_edit_tabs" name="banner_tabs"></block>
         </reference>
+
         <!-- <reference name="left">
             <block type="adminhtml/cms_page_edit_tabs" name="cms_page_edit_tabs">
                 <block type="adminhtml/cms_page_edit_tab_main" name="cms_page_edit_tab_main" />

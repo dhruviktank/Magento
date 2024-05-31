@@ -84,6 +84,7 @@ class Mage_Adminhtml_Block_System_Config_Edit extends Mage_Adminhtml_Block_Widge
         */
 
         $blockName = (string)$this->_section->frontend_model;
+        
         if (empty($blockName)) {
             $blockName = self::DEFAULT_SECTION_BLOCK;
         }

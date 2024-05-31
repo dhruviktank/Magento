@@ -192,6 +192,8 @@ class Ccc_Banner_Adminhtml_BannerController extends Mage_Adminhtml_Controller_Ac
     protected function _isAllowed()
     {
         $action = strtolower($this->getRequest()->getActionName());
+        // echo '<pre>';
+        // print_r(Mage::getSingleton('admin/session')->getAcl());
 
         switch ($action) {
             case "showbutton":
@@ -208,5 +210,10 @@ class Ccc_Banner_Adminhtml_BannerController extends Mage_Adminhtml_Controller_Ac
                 break;
         }
         return Mage::getSingleton('admin/session')->isAllowed($aclResource);
+    }
+
+    public function gridAction(){
+        $this->loadLayout();
+        $this->renderLayout();
     }
 }

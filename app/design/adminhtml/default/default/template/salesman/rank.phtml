@@ -1,0 +1,58 @@
+<style>
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.data-table th,
+.data-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+</style>
+
+<?php $salesmanData = $this->getSalesmanData(); ?>
+
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>Salesman</th>
+            <th>Overall Rank</th>
+            <th>Product</th>
+            <th>Shipping</th>
+            <th>Tax</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($salesmanData as $salesman): ?>
+        <tr>
+            <td><?php echo $salesman['username']; ?></td>
+            <td><?php echo $salesman['overall_rank']; ?></td>
+            <td style="background-color: <?php //echo $salesman['product_rank_color']; ?>">
+                <?php echo $salesman['product'] . " => " . $salesman['product_rank']; ?>
+            </td>
+            <td style="background-color: <?php //echo $salesman['shipping_rank_color']; ?>">
+                <?php echo $salesman['shipping'] . " => " . $salesman['shipping_rank']; ?>
+            </td>
+            <td style="background-color: <?php //echo $salesman['tax_rank_color']; ?>">
+                <?php echo $salesman['tax'] . " => " . $salesman['tax_rank']; ?>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>

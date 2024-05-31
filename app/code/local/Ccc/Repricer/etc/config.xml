@@ -40,9 +40,9 @@
         <models>
             <repricer>
                 <class>Ccc_Repricer_Model</class>
-                <resourceModel>competitor_resource</resourceModel>
+                <resourceModel>repricer_resource</resourceModel>
             </repricer>
-            <competitor_resource>
+            <repricer_resource>
                 <class>Ccc_Repricer_Model_Resource</class>
                 <entities>
                     <competitor>
@@ -52,7 +52,7 @@
                         <table>ccc_repricer_matching</table>
                     </matching>
                 </entities>
-            </competitor_resource>
+            </repricer_resource>
         </models>
         <resources>
             <repricer_setup>
@@ -67,30 +67,30 @@
     </global>
     <crontab>
         <jobs>
-            <update_comp_product>
+            <save_new_data>
                 <schedule>
-                    <cron_expr>*/5 * * * *</cron_expr>                   
+                    <cron_expr>*/30 * * * *</cron_expr>
                 </schedule>
                 <run>
-                    <model>repricer/observer::updateMatchingData</model>
+                    <model>repricer/observer::saveNewData</model>
                 </run>
-            </update_comp_product>
-            <download_csv>
+            </save_new_data>
+            <import_csv>
                 <schedule>
-                    <cron_expr>*/5 * * * *</cron_expr>                   
+                    <cron_expr>*/30 * * * *</cron_expr>
                 </schedule>
                 <run>
-                    <model>repricer/observer::downloadCsv</model>
+                    <model>repricer/observer::importCsv</model>
                 </run>
-            </download_csv>
-            <upload_csv>
+            </import_csv>
+            <export_csv>
                 <schedule>
-                    <cron_expr>*/5 * * * *</cron_expr>                   
+                    <cron_expr>*/30 * * * *</cron_expr>
                 </schedule>
                 <run>
-                    <model>repricer/observer::uploadcsv</model>
+                    <model>repricer/observer::exportCsv</model>
                 </run>
-            </upload_csv>
+            </export_csv>
         </jobs>
     </crontab>
 </config>
