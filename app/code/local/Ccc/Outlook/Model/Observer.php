@@ -11,7 +11,7 @@ class Ccc_Outlook_Model_Observer
 
     //YsQ8Q~bw36LKC3ThG.hJgwqsQWyEYtoAvyfyFbrn
 
-    //cccoutlook: iTM8Q~uVnEfgCVxcknhPCg2p7~Kz02rP.HB3PaUP
+    // iTM8Q~uVnEfgCVxcknhPCg2p7~Kz02rP.HB3PaUP
     protected $scope = 'https://graph.microsoft.com/.default';
     protected $grantType = 'client_credentials';
     public function getClientAccessToken()
