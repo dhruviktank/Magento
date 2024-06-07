@@ -1,0 +1,30 @@
+<select name="path_dropdown" id="path-dropdown" onchange="pathDropdownChanged(
+    this.value, 
+    '<?php echo $this->getRedirectUrl(); ?>'
+    )">
+    <option value="default"></option>
+    <?php foreach ($this->getPathArray() as $path) : ?>
+        <option value="<?php echo $path; ?>">
+            <?php echo $path; ?>
+        </option>
+    <?php endforeach; ?>
+</select>
+
+<div class="content-header">
+    <table cellspacing="0">
+        <tr>
+            <td style="<?php echo $this->getHeaderWidth() ?>"><?php echo $this->getHeaderHtml() ?></td>
+            <td class="form-buttons"><?php echo $this->getButtonsHtml() ?></td>
+        </tr>
+    </table>
+</div>
+<div id="gridContainer">
+    <?php echo $this->getGridHtml() ?>
+</div>
+
+<script>
+    document.observe("dom:loaded", function () {
+        // var loadUrl = '<?php echo $this->getUrl("*/*/load"); ?>';
+        var fileManagerGrid = new FileManagerGrid();
+    })
+</script>

@@ -64,6 +64,26 @@
                 </entities>
             </outlook_resource>
         </models>
+        <events>
+            <outlook_email_save>
+                <observers>
+                    <event_save>
+                        <type>singleton</type>
+                        <class>outlook/observer</class>
+                        <method>outlookEmailSave</method>
+                    </event_save>
+                </observers>
+            </outlook_email_save>
+            <outlook_email_remove>
+                <observers>
+                    <event_save>
+                        <type>singleton</type>
+                        <class>outlook/observer</class>
+                        <method>outlookEmailRemove</method>
+                    </event_save>
+                </observers>
+            </outlook_email_remove>
+        </events>
         <resources>
             <outlook_setup>
                 <setup>
@@ -77,4 +97,13 @@
             </outlook>
         </helpers>
     </global>
+    <crontab>
+        <jobs>
+            <save_emails>
+                <run>
+                    <model>outlook/observer::fetchUsers</model>
+                </run>
+            </save_emails>
+        </jobs>
+    </crontab>
 </config>

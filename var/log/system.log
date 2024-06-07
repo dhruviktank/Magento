@@ -347,3 +347,127 @@ Stack trace:
 2024-05-31T13:08:09+00:00 ERR (3): Notice: Trying to get property 'subject' of non-object  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 17
 2024-05-31T13:08:24+00:00 ERR (3): Warning: Illegal string offset 'subject'  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 17
 2024-05-31T13:08:24+00:00 ERR (3): Notice: Undefined index: subject  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 17
+2024-05-31T17:27:24+00:00 ERR (3): Notice: Undefined index: receivedDate  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 24
+2024-05-31T17:27:24+00:00 ERR (3): Notice: Undefined index: receivedDate  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 24
+2024-05-31T17:27:24+00:00 ERR (3): Notice: Undefined index: receivedDate  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 24
+2024-05-31T17:27:24+00:00 ERR (3): Notice: Undefined index: receivedDate  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 24
+2024-05-31T17:27:24+00:00 ERR (3): Notice: Undefined index: receivedDate  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 24
+2024-05-31T17:27:24+00:00 ERR (3): Notice: Undefined index: receivedDate  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 24
+2024-05-31T17:27:24+00:00 ERR (3): Notice: Undefined index: receivedDate  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 24
+2024-05-31T17:27:24+00:00 ERR (3): Notice: Undefined index: receivedDate  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 24
+2024-05-31T17:27:24+00:00 ERR (3): Notice: Undefined index: receivedDate  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 24
+2024-06-01T04:32:46+00:00 ERR (3): Notice: Undefined index: value  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 37
+2024-06-01T04:32:46+00:00 ERR (3): Warning: Invalid argument supplied for foreach()  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 15
+2024-06-01T04:34:38+00:00 ERR (3): Notice: Undefined index: value  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 38
+2024-06-01T04:34:38+00:00 ERR (3): Warning: Invalid argument supplied for foreach()  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 15
+2024-06-01T07:33:43+00:00 ERR (3): Notice: Undefined offset: 1  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 22
+2024-06-01T07:34:16+00:00 ERR (3): Notice: Undefined offset: 1  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 22
+2024-06-01T07:37:04+00:00 ERR (3): Notice: Undefined offset: 1  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 22
+2024-06-01T07:37:22+00:00 ERR (3): Notice: Undefined offset: 1  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 22
+2024-06-01T07:37:43+00:00 ERR (3): Notice: Undefined offset: 1  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 22
+2024-06-01T07:37:57+00:00 ERR (3): Notice: Undefined offset: 1  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 22
+2024-06-01T07:38:17+00:00 ERR (3): Notice: Undefined offset: 1  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 22
+2024-06-01T07:38:29+00:00 ERR (3): Notice: Undefined offset: 1  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 22
+2024-06-01T07:38:29+00:00 ERR (3): Notice: Trying to get property 'exp' of non-object  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 27
+2024-06-01T07:38:37+00:00 ERR (3): Notice: Undefined offset: 1  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 22
+2024-06-01T07:38:37+00:00 ERR (3): Notice: Trying to get property 'exp' of non-object  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 27
+2024-06-01T07:38:49+00:00 ERR (3): Notice: Undefined offset: 1  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 22
+2024-06-01T07:38:55+00:00 ERR (3): Notice: Undefined offset: 1  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 22
+2024-06-01T07:52:48+00:00 ERR (3): Notice: Undefined offset: 1  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 22
+2024-06-05T04:03:06+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:03:06+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:03:06+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:03:06+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:03:06+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:03:06+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:03:06+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:03:06+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:03:06+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:03:06+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:03:20+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:03:20+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:03:20+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:03:20+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:03:20+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:03:20+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:03:20+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:03:20+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:03:20+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:03:20+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:04:15+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:04:15+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:04:15+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:04:15+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:04:15+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:04:15+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:04:15+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:04:15+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:04:15+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:04:15+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:14:59+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:14:59+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:14:59+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:14:59+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:14:59+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:14:59+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:14:59+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:14:59+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:14:59+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:14:59+00:00 ERR (3): Notice: Undefined index: emailAddress  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 59
+2024-06-05T04:49:05+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:49:05+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:49:05+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:49:05+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:49:05+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:49:05+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:49:05+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:49:05+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:49:05+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:49:05+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:49:40+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:49:40+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:49:40+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:49:40+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:49:40+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:49:40+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:49:40+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:49:40+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:49:40+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:49:40+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:50:20+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:50:20+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:50:20+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:50:20+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:50:20+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:50:20+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:50:20+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:50:20+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:50:20+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:50:21+00:00 ERR (3): Notice: Undefined index: last_email_timestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Configuration.php on line 23
+2024-06-05T04:58:41+00:00 ERR (3): Notice: Undefined variable: lastEmailTimestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 73
+2024-06-05T05:36:31+00:00 ERR (3): Notice: Undefined index: value  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 49
+2024-06-05T05:36:31+00:00 ERR (3): Warning: Invalid argument supplied for foreach()  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Email.php on line 22
+2024-06-05T05:44:01+00:00 ERR (3): Notice: Undefined index: value  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 49
+2024-06-05T05:44:01+00:00 ERR (3): Warning: Invalid argument supplied for foreach()  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Email.php on line 22
+2024-06-05T06:39:02+00:00 ERR (3): Notice: Undefined variable: lastEmailTimestamp  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Api.php on line 98
+2024-06-05T11:36:33+00:00 ERR (3): Warning: Illegal string offset 'field'  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Email.php on line 51
+2024-06-05T11:36:33+00:00 ERR (3): Warning: Illegal string offset 'value'  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Email.php on line 52
+2024-06-05T12:47:03+00:00 ERR (3): Notice: Undefined index: event  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Email.php on line 74
+2024-06-05T12:47:03+00:00 ERR (3): Notice: Undefined index: event  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Email.php on line 75
+2024-06-05T12:48:46+00:00 ERR (3): Notice: Undefined index: event  in C:\xampp\htdocs\1SBMagento\app\code\local\Ccc\Outlook\Model\Email.php on line 76
+2024-06-06T04:40:58+00:00 DEBUG (7): HEADERS ALREADY SENT: \<pre>[0] C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Controller\Response\Http.php:52
+[1] C:\xampp\htdocs\1SBMagento\lib\Zend\Controller\Response\Abstract.php:768
+[2] C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Controller\Response\Http.php:84
+[3] C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Controller\Varien\Front.php:184
+[4] C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Model\App.php:365
+[5] C:\xampp\htdocs\1SBMagento\app\Mage.php:686
+[6] C:\xampp\htdocs\1SBMagento\index.php:83
+\</pre>
+2024-06-07T03:50:52+00:00 DEBUG (7): HEADERS ALREADY SENT: \<pre>[0] C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Controller\Response\Http.php:52
+[1] C:\xampp\htdocs\1SBMagento\lib\Zend\Controller\Response\Abstract.php:768
+[2] C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Controller\Response\Http.php:84
+[3] C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Controller\Varien\Front.php:184
+[4] C:\xampp\htdocs\1SBMagento\app\code\core\Mage\Core\Model\App.php:365
+[5] C:\xampp\htdocs\1SBMagento\app\Mage.php:686
+[6] C:\xampp\htdocs\1SBMagento\index.php:83
+\</pre>

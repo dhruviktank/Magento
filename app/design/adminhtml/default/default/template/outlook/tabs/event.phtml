@@ -1,16 +1,21 @@
-<button id="add-event">Add Event</button>
-<a id="save-events">Save Events</a>
-<div id="event-tables-container"></div>
-<?php //$config_id = ($this->getRequest()->getParam('config_id'));
+<div id="event-container">
+    <button type="button" id="add-event" class="add-event">Add Event</button>
+    <button type="button" id="save-event" class="save-event">Save Events</button>
+    <div id="event-table-container" class="event-container-table"></div>
+</div>
 
-
-// print_r(Mage::getModel('outlook/event')->getCollection()->addFieldToFilter('config_id',$config_id)->getData());
-?>
 <script>
     document.observe('dom:loaded', function () {
-        eventManager = new EventManager('add-event', 'event-tables-container');
-        $("save-events").observe("click", function() {
-            eventManager.sendEventData();
-        });
+        var saveUrl = '<?php echo $this->getUrl('*/*/saveEvent'); ?>'
+        var fetchUrl = '<?php echo $this->getUrl('*/*/fetchEvent'); ?>'
+        var eventManager = new EventManager(
+            'event-container', 
+            'add-event', 
+            'save-event', 
+            'event-table-container', 
+            saveUrl,
+            <?php echo Mage::registry("configuration")->getId(); ?>,
+            fetchUrl
+        );
     });
 </script>

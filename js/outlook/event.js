@@ -1,249 +1,223 @@
+var j = jQuery.noConflict();
 var EventManager = Class.create({
-    initialize: function (addEventButtonId, eventTablesContainerId) {
-        this.eventCount = 0;
-        this.eventTablesContainer = $(eventTablesContainerId);
-        this.addEventButton = $(addEventButtonId);
-        this.addEventButton.observe("click", this.addNewEventTable.bind(this));
+    initialize: function (containerId, addButtonId, saveButtonId, eventTableContainerId, saveUrl, configId, fetchUrl) {
+        this.containerId = containerId;
+        this.eventTableContainerId = eventTableContainerId;
+        this.fetchUrl = fetchUrl;
+        this.saveUrl = saveUrl;
+        this.configId = configId;
+        this.addButtonId = addButtonId;
+        this.saveButtonId = saveButtonId;
+        this.onAddEvent = this.addEvent.bindAsEventListener(this);
+        this.onAddCondition = this.addCondition.bindAsEventListener(this);
+        this.onDeleteEvent = this.removeEvent.bindAsEventListener(this);
+        this.onDeleteCondition = this.removeCondition.bindAsEventListener(this);
+        this.onSaveEvent = this.saveEvent.bindAsEventListener(this);
+        this.initEventManager();
     },
-
-    addNewEventTable: function (event) {
-        event.stop();
-        this.eventCount++;
-        var groupID = this.eventCount;
-        var table = document.createElement("table");
-        table.setAttribute("id", "event-table-" + groupID);
-        table.setAttribute("border", "1");
-
-        var thead = document.createElement("thead");
-        var trHead = document.createElement("tr");
-        var headers = ["Field", "Condition", "Value", "Event", "Delete Event"];
-        headers.forEach(function (headerText) {
-            var th = document.createElement("th");
-            th.textContent = headerText;
-            trHead.appendChild(th);
-        });
-        thead.appendChild(trHead);
-        table.appendChild(thead);
-
-        var tbody = document.createElement("tbody");
-        var trBody = document.createElement("tr");
-        trBody.classList.add("event-" + groupID);
-
-        // Field Dropdown
-        var tdField = document.createElement("td");
-        var selectField = document.createElement("select");
-        selectField.classList.add("field-select");
-        var fields = ["from", "to", "subject"];
-        fields.forEach(function (field) {
-            var option = document.createElement("option");
-            option.setAttribute("value", field);
-            option.textContent = field.charAt(0).toUpperCase() + field.slice(1);
-            selectField.appendChild(option);
-        });
-        tdField.appendChild(selectField);
-        trBody.appendChild(tdField);
-
-        // Condition Dropdown
-        var tdCondition = document.createElement("td");
-        var selectCondition = document.createElement("select");
-        selectCondition.classList.add("condition-select");
-        var conditions = ["Equals", "Contains"];
-        conditions.forEach(function (condition) {
-            var option = document.createElement("option");
-            option.textContent = condition;
-            selectCondition.appendChild(option);
-        });
-        tdCondition.appendChild(selectCondition);
-        trBody.appendChild(tdCondition);
-
-        // Value Input
-        var tdValue = document.createElement("td");
-        var inputValue = document.createElement("input");
-        inputValue.setAttribute("type", "text");
-        inputValue.classList.add("value-input");
-        tdValue.appendChild(inputValue);
-        trBody.appendChild(tdValue);
-
-        // Event Dropdown
-        var tdEvent = document.createElement("td");
-        tdEvent.setAttribute("rowspan", "1");
-        var inputEvent = document.createElement("input");
-        inputEvent.setAttribute("type", "text");
-        inputEvent.classList.add("event-input");
-        tdEvent.appendChild(inputEvent);
-        trBody.appendChild(tdEvent);
-    
-
-        var addConditionBtn = document.createElement("button");
-        addConditionBtn.textContent = "Add Condition";
-        addConditionBtn.classList.add("add-condition");
-        addConditionBtn.setAttribute("data-groupid", groupID);
-        tdEvent.appendChild(addConditionBtn);
-
-        var deleteConditionBtn = document.createElement("button");
-        deleteConditionBtn.textContent = "Delete Condition";
-        deleteConditionBtn.classList.add("delete-condition");
-        tdEvent.appendChild(deleteConditionBtn);
-
-        trBody.appendChild(tdEvent);
-
-        // Delete Event Button
-        var deleteEventBtn = document.createElement("button");
-        deleteEventBtn.textContent = "Delete Event";
-        deleteEventBtn.classList.add("delete-event");
-        deleteEventBtn.setAttribute("data-groupid", groupID);
-        var tdDeleteEvent = document.createElement("td");
-        tdDeleteEvent.appendChild(deleteEventBtn);
-        trBody.appendChild(tdDeleteEvent);
-
-        tbody.appendChild(trBody);
-        table.appendChild(tbody);
-        this.eventTablesContainer.appendChild(table);
-
-        $$("#event-table-" + groupID + " .add-condition").invoke(
-            "observe",
-            "click",
-            this.addConditionRow.bind(this, groupID)
-        );
-        $$("#event-table-" + groupID + " .delete-condition").invoke(
-            "observe",
-            "click",
-            this.deleteCondition.bind(this, groupID)
-        );
-        $$("#event-table-" + groupID + " .delete-event").invoke(
-            "observe",
-            "click",
-            this.deleteEvent.bind(this, groupID)
-        );
+    initEventManager: function () {
+        $(this.addButtonId).observe("click", this.onAddEvent);
+        $(this.saveButtonId).observe("click", this.onSaveEvent);
+        this.loadEvents();
     },
-
-    addConditionRow: function (groupID, event) {
-        event.stop(); // Prevent the default behavior of the button
-        var newRow = document.createElement("tr");
-        newRow.classList.add("event-" + groupID);
-
-        // Field Dropdown
-        var tdField = document.createElement("td");
-        var selectField = document.createElement("select");
-        selectField.classList.add("field-select");
-        var fields = ["from", "to", "subject"];
-        fields.forEach(function (field) {
-            var option = document.createElement("option");
-            option.setAttribute("value", field);
-            option.textContent = field.charAt(0).toUpperCase() + field.slice(1);
-            selectField.appendChild(option);
-        });
-        tdField.appendChild(selectField);
-        newRow.appendChild(tdField);
-
-        // Condition Dropdown
-        var tdCondition = document.createElement("td");
-        var selectCondition = document.createElement("select");
-        selectCondition.classList.add("condition-select");
-        var conditions = ["Equals", "Contains"];
-        conditions.forEach(function (condition) {
-            var option = document.createElement("option");
-            option.textContent = condition;
-            selectCondition.appendChild(option);
-        });
-        tdCondition.appendChild(selectCondition);
-        newRow.appendChild(tdCondition);
-
-        // Value Input
-        var tdValue = document.createElement("td");
-        var inputValue = document.createElement("input");
-        inputValue.setAttribute("type", "text");
-        inputValue.classList.add("value-input");
-        tdValue.appendChild(inputValue);
-        newRow.appendChild(tdValue);
-
-        $$("#event-table-" + groupID + " tbody tr")
-            .last()
-            .insert({ after: newRow });
-        this.updateEventRowSpan(groupID);
-    },
-
-    updateEventRowSpan: function (groupID) {
-        var rowCount = $$("#event-table-" + groupID + " .event-" + groupID).length;
-        $$("#event-table-" + groupID + " .event-section").invoke(
-            "writeAttribute",
-            "rowspan",
-            rowCount
-        );
-    },
-
-    deleteCondition: function (groupID, event) {
-        event.stop(); // Prevent the default behavior of the button
-        var rowCount = $$("#event-table-" + groupID + " .event-" + groupID).length;
-        if (rowCount > 1) {
-            $$("#event-table-" + groupID + " .event-" + groupID)
-                .last()
-                .remove();
-            this.updateEventRowSpan(groupID);
-        }
-    },
-
-    deleteEvent: function (groupID) {
-        $("event-table-" + groupID).remove();
-        this.eventCount--;
-    },
-
-    collectEventData: function() {
-        var eventDataGroups = {}; // Object to store event data grouped by group_id
-        var eventTables = $$("#event-tables-container table");
-        eventTables.forEach(function(table) {
-            var groupID = table.getAttribute("id").split("-").pop();
-            var constEvent = null; // Initialize the constEvent variable
-    
-            var rows = $$("#" + table.getAttribute("id") + " tbody tr");
-    
-            rows.forEach(function(row) {
-                var field = row.querySelector(".field-select").value;
-                var condition = row.querySelector(".condition-select").value;
-                var value = row.querySelector(".value-input").value;
-    
-                // Check if the event input exists and assign it to constEvent if it does
-                var eventInput = row.querySelector(".event-input");
-                if (eventInput && eventInput.value) {
-                    constEvent = eventInput.value;
-                }
-    
-                // Use the constEvent value for the event field
-                var event = constEvent;
-    
-                // Add event data to the corresponding group_id
-                if (!eventDataGroups[groupID]) {
-                    eventDataGroups[groupID] = [];
-                }
-                eventDataGroups[groupID].push({
-                    field: field,
-                    condition: condition,
-                    value: value,
-                    event: event
+    loadEvents: function () {
+        this.fetchEvents()
+            .then((response) => {
+                const events = {};
+                response.forEach((event) => {
+                    if (!events[event.group_id]) {
+                        events[event.group_id] = [];
+                    }
+                    events[event.group_id].push({
+                        field: event.field,
+                        condition: event.condition,
+                        value: event.value,
+                        event: event.event,
+                        eventId: event.event_id,
+                    });
                 });
+
+                Object.keys(events).forEach((groupId) => {
+                    this.addEventWithConditions(events[groupId], groupId);
+                });
+            })
+            .catch((error) => {
+                console.error('Failed to load events:', error);
+            });
+    },
+    fetchEvents: function () {
+        var self = this;
+        return new Promise(function (resolve, reject) {
+            new Ajax.Request(self.fetchUrl, {
+                parameters: { 'configId': self.configId },
+                evalScripts: true,
+                method: 'post',
+                onFailure: function (e) {
+                    reject(e);
+                },
+                onSuccess: function (response) {
+                    resolve(JSON.parse(response.responseText));
+                },
             });
         });
-    
-        return eventDataGroups;
+    },
+    addEventWithConditions: function (conditions, groupId) {
+        const eventTableContainer = $(this.eventTableContainerId);
+        const table = new Element('table', { 'border': 1, 'class': 'event-table' });
+        j(table).data('groupId', groupId);
+
+        table.insert(this.prepareHeaders());
+        const tbody = new Element('tbody');
+        
+        conditions.forEach((condition, index) => {
+            const isFirstCondition = index === 0;
+            const isLastCondition = index === conditions.length - 1;
+            tbody.insert(this.prepareCondition(isFirstCondition, condition, isLastCondition));
+        });
+
+        table.insert(tbody);
+        eventTableContainer.insert(table);
+    },
+    addEvent: function (event) {
+        event.stop();
+        var eventTableContainer = $(this.eventTableContainerId);
+        var eventTable = $$('#' + this.eventTableContainerId + ' .event-table');
+        var table = new Element('table', { 'border': 1, 'class': 'event-table' });
+        j(table).data('groupId', eventTable.length + 1)
+
+        table.insert(this.prepareHeaders());
+        var tbody = new Element('tbody');
+        tbody.insert(this.prepareCondition(true));
+        table.insert(tbody);
+        eventTableContainer.insert(table);
     },
 
-    sendEventData: function() {
-        // event.stop;
-        var eventData = this.collectEventData();
-        // console.log(eventData);
-        // return;
-        new Ajax.Request('http://127.0.0.1/magento/index.php/admin/event/save/form_key/'+ FORM_KEY, {
-            method: 'post',
-            contentType: 'application/json',
-            postBody: JSON.stringify({ events: eventData }),
-            onSuccess: function(response) {
-                // Handle successful response
-                console.log('Data saved successfully');
-            },
-            onFailure: function(response) {
-                // Handle error response
-                console.log('Failed to save data');
-            }
+    removeEvent: function (event) {
+        event.stop();
+        j(event.target).closest('table').eq(0).remove();
+    },
+    prepareHeaders: function () {
+        var thead = new Element('thead');
+        var tr = new Element('tr');
+        ["Field", "Condition", "Value", "", "Event", "Delete Event"].forEach(function (headerLabel) {
+            var th = new Element('th').update(headerLabel);
+            tr.insert(th);
         });
-    }
+        thead.insert(tr);
+        return thead;
+    },
+
+    addCondition: function (event) {
+        event.stop();
+        var table = j(event.target).closest('table').eq(0);
+        var newRowSpan = Number(table.find('.event-input').attr('rowspan')) + 1
+        table.find('.event-input').attr('rowspan', newRowSpan);
+        table.find('.event-remove-button').attr('rowspan', newRowSpan);
+        table.find('tbody').eq(0).append(this.prepareCondition(false, {}, true));
+        (event.target).stopObserving("click", this.onAddCondition);
+        (event.target).observe("click", this.onDeleteCondition);
+        (event.target).update('Delete Condition');
+    },
+    removeCondition: function (event) {
+        event.stop();
+        var conditionRow = j(event.target).closest('tr');
+        var table = j(event.target).closest('table').eq(0);
+        var newRowSpan = Number(table.find('.event-input').attr('rowspan')) - 1;
+        table.find('.event-input').attr('rowspan', newRowSpan);
+        table.find('.event-remove-button').attr('rowspan', newRowSpan);
+        var tds = conditionRow.find('td');
+        if (tds.length == 6) {
+            conditionRow.next().append(conditionRow.find('td').slice(4))
+            conditionRow.remove();
+        } else {
+            conditionRow.remove();
+        }
+    },
+    prepareCondition: function (isFirst, condition = {}, isLast = false) {
+        const tr = new Element('tr');
+        const fieldTd = new Element('td').update(this.createDropDown(['from', 'to', 'subject'], condition.field));
+        const conditionTd = new Element('td').update(this.createDropDown(['Equals', 'Contains'], condition.condition));
+        const inputTd = new Element('td').update(new Element('input', { 'value': condition.value || '' }));
+        
+        const actionBtn = new Element('button').update(isLast ? 'Add Condition' : 'Delete Condition');
+        actionBtn.observe("click", isLast ? this.onAddCondition : this.onDeleteCondition);
+        const actionTd = new Element('td').update(actionBtn);
+        
+        tr.insert(fieldTd);
+        tr.insert(conditionTd);
+        tr.insert(inputTd);
+        tr.insert(actionTd);
+        j(tr).data('eventId', condition.eventId);
+        
+        if (isFirst) {
+            const eventInput = new Element('input', { 'type': 'text', 'value': condition.event || '' });
+            tr.insert(new Element('td', { 'rowspan': 1, 'class': 'event-input' }).update(eventInput));
+            const removeEventBtn = new Element('button').update('Remove Event');
+            removeEventBtn.observe("click", this.onDeleteEvent);
+            tr.insert(new Element('td', { 'rowspan': 1, 'class': 'event-remove-button' }).update(removeEventBtn));
+        }
+        
+        return tr;
+    },
+    createDropDown: function (options, selectedValue) {
+        var select = new Element('select');
+        for (var i = 0; i < options.length; i++) {
+            var option = new Element('option');
+            option.innerText = options[i];
+            option.value = options[i];
+            if (options[i] == selectedValue) {
+                option.selected = true;
+            }
+            select.appendChild(option);
+        }
+        return select;
+    },
+    prepareEventData: function () {
+        const eventTables = $$('#' + this.eventTableContainerId + ' table');
+        const data = [];
+        const configId = this.configId;
+
+        eventTables.each((table) => {
+            const groupId = Number(j(table).data('groupId'));
+            const event = j(table).find('.event-input').find('input').val();
+            const conditions = [];
+
+            j(table).find('tbody').find('tr').each(function () {
+                const tds = j(this).find('td');
+                console.log(j(this));
+                const condition = {
+                    field: tds.eq(0).find('select').val(),
+                    condition: tds.eq(1).find('select').val(),
+                    value: tds.eq(2).find('input').val(),
+                    eventId: j(this).data('eventId'),
+                    event: event
+                };
+                conditions.push(condition);
+            });
+
+            const obj = {
+                groupId: groupId,
+                configId: configId,
+                condition: conditions
+            };
+            data.push(obj);
+        });
+        return data;
+    },
+
+    saveEvent: function (event) {
+        event.stop();
+        var data = this.prepareEventData();
+        new Ajax.Request(this.saveUrl, {
+            parameters: { 'data': JSON.stringify(data), 'configId': this.configId },
+            method: 'post',
+            onFailure: function (error) {
+                alert('Failed to Save ' + error);
+            },
+            onSuccess: function (response) {
+                console.log(response);
+            },
+        });
+    },
+
 });

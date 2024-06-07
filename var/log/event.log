@@ -1,0 +1,34 @@
+2024-06-05T12:48:46+00:00 DEBUG (7): Array
+(
+    [email_key] => AQMkADAwATMwMAItNzg5Ny02OTg3LTAwAi0wMAoARgAAA_LtNSLBZqhAqLT_MgcowTIHAJhNuzBZdX5MksTth49F_poAAAIBFgAAAJhNuzBZdX5MksTth49F_poAAAADQidjAAAA
+    [subject] => Dispatch
+    [sender_name] => Parth Khakhkhar
+    [sender_address] => ccc_parth07@outlook.com
+    [recipient_address] => ccdhruvik@outlook.com
+    [received_at] => 2024-06-05T11:15:44Z
+    [body] => jkfdsjfgdsjhf
+'sfgdskfgsf
+dsfjhdsgfjsdgfs
+sfgjdsjfds
+    [has_attachment] => 0
+    [configuration_id] => 1
+)
+
+2024-06-05T12:48:46+00:00 DEBUG (7): remove event dispatched
+2024-06-05T12:58:52+00:00 DEBUG (7): Array
+(
+    [email_key] => AQMkADAwATMwMAItNzg5Ny02OTg3LTAwAi0wMAoARgAAA_LtNSLBZqhAqLT_MgcowTIHAJhNuzBZdX5MksTth49F_poAAAIBFgAAAJhNuzBZdX5MksTth49F_poAAAADQidjAAAA
+    [subject] => Dispatch
+    [sender_name] => Parth Khakhkhar
+    [sender_address] => ccc_parth07@outlook.com
+    [recipient_address] => ccdhruvik@outlook.com
+    [received_at] => 2024-06-05T11:15:44Z
+    [body] => jkfdsjfgdsjhf
+'sfgdskfgsf
+dsfjhdsgfjsdgfs
+sfgjdsjfds
+    [has_attachment] => 0
+    [configuration_id] => 1
+)
+
+2024-06-05T12:58:52+00:00 DEBUG (7): remove event dispatched

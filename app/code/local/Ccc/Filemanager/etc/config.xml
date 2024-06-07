@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Ccc_Filemanager>
+            <version>1.0.0.1</version>
+        </Ccc_Filemanager>
+    </modules>
+    <adminhtml>
+        <layout>
+            <updates>
+                <filemanager>
+                    <file>ccc_filemanager.xml</file>
+                </filemanager>
+            </updates>
+        </layout>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Ccc_Filemanager>Ccc_Filemanager_Adminhtml</Ccc_Filemanager>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <global>
+        <helpers>
+            <filemanager>
+                <class>Ccc_Filemanager_Helper</class>
+            </filemanager>
+        </helpers>
+        <blocks>
+            <filemanager>
+                <class>Ccc_Filemanager_Block</class>
+            </filemanager>
+        </blocks>
+        <models>
+            <filemanager>
+                <class>Ccc_Filemanager_Model</class>
+                <!-- <resourceModel>locationcheck_resource</resourceModel> -->
+            </filemanager>
+        </models>
+    </global>
+</config>

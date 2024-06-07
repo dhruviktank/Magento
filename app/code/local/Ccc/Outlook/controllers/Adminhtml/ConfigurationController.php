@@ -1,14 +1,17 @@
 <?php
 
-class Ccc_Outlook_Adminhtml_ConfigurationController extends Mage_Adminhtml_Controller_Action{
-    protected function _initAction(){
+class Ccc_Outlook_Adminhtml_ConfigurationController extends Mage_Adminhtml_Controller_Action
+{
+    protected function _initAction()
+    {
 
         $this->loadLayout()
             ->_setActiveMenu('outlook/configuration');
         return $this;
     }
-    
-    public function indexAction(){
+
+    public function indexAction()
+    {
         $this->_initAction()
             ->_title(Mage::helper('outlook')->__('Configuration'));
         $this->renderLayout();
@@ -18,18 +21,17 @@ class Ccc_Outlook_Adminhtml_ConfigurationController extends Mage_Adminhtml_Contr
         $this->_forward('edit');
     }
 
-    public function loginAction(){
-        $arg = $this->getRequest()->getParam('id');
-        $user = Mage::getModel('outlook/configuration')->load($arg);
-        $clientId = $user->getClientId();
-        $scope = 'https://graph.microsoft.com/Mail.Read';
-        $redirectUri = Mage::getUrl('outlook/callback/token',['id'=>$arg]);
-        $authorizationEndpoint = "https://login.microsoftonline.com/common/oauth2/v2.0/authorize";
-        $authUrl = "$authorizationEndpoint?client_id={$clientId}&response_type=code&redirect_uri=$redirectUri&scope={$scope}";
-        $this->_redirectUrl($authUrl);
+    public function loginAction()
+    {
+        $configId = $this->getRequest()->getParam('id');
+        if ($configId) {
+            $userConfig = Mage::getModel('outlook/configuration')->load($configId);
+            $authUrl = Mage::getModel('outlook/api')
+                ->setUserConfig($userConfig)
+                ->getAuthorizationUrl();
+            $this->_redirectUrl($authUrl);
+        }
     }
-
-    public function storeAccessCodeAction(){}
     public function editAction()
     {
         $id = $this->getRequest()->getParam('configuration_id');
@@ -44,19 +46,60 @@ class Ccc_Outlook_Adminhtml_ConfigurationController extends Mage_Adminhtml_Contr
         }
         $this->_title($model->getConfigurationId() ? $model->getTitle() : $this->__('New Block'));
 
-        // 3. Set entered data if was error when we do save
         $data = Mage::getSingleton('adminhtml/session')->getFormData(true);
         if (!empty($data)) {
             $model->setData($data);
         }
 
-        // 4. Register model to use later in blocks
         Mage::register('configuration', $model);
         $this->_initAction()
             ->_addBreadcrumb($id ? $this->__('Edit Configuration') : $this->__('New Configuration'), $id ? $this->__('Edit Configuration') : $this->__('New Configuration'))
             ->renderLayout();
     }
+    public function fetchEventAction()
+    {
+        $configId = $this->getRequest()->getParam('configId');
+        $events = Mage::getModel('outlook/event')->getCollection()
+            ->addFieldtoFilter('configuration_id', $configId)
+            ->getData();
+        $this->getResponse()->setBody(json_encode($events));
+    }
 
+    public function saveEventAction()
+    {
+        $request = $this->getRequest()->getParams();
+        if (isset($request['data'])) {
+            // print_r($request); die;
+            $existingEventIds = Mage::getModel('outlook/event')->getCollection()
+            ->addFieldToFilter('configuration_id', $request['configId'])
+            ->getAllIds();
+            // print_r($existingEvents); die;
+            $data = json_decode($request['data']);
+            $submittedEventIds = [];
+            foreach ($data as $_event) {
+                foreach ($_event->condition as $_condition) {
+                    $event = Mage::getModel('outlook/event');
+                    if (isset($_condition->eventId) && !empty($_condition->eventId)){
+                        $event->load($_condition->eventId);
+                        $submittedEventIds[] = $_condition->eventId;
+                    }
+                    $event->setField($_condition->field);
+                    $event->setCondition($_condition->condition);
+                    $event->setValue($_condition->value);
+                    $event->setEvent($_condition->event);
+                    $event->setConfigurationId($_event->configId);
+                    $event->setGroupId($_event->groupId);
+                    $event->save();
+                }
+            }
+            foreach ($existingEventIds as $eventId) {
+                if (!in_array($eventId, $submittedEventIds)) {
+                    $event = Mage::getModel('outlook/event')->load($eventId);
+                    $event->delete();
+                }
+            }
+        }
+    }
     public function saveAction()
     {
         if ($data = $this->getRequest()->getPost()) {
@@ -87,36 +130,6 @@ class Ccc_Outlook_Adminhtml_ConfigurationController extends Mage_Adminhtml_Contr
             }
         }
         $this->_redirect('*/*/');
-    }
-    public function saveEventAction()
-    {
-        $params = json_decode($this->getRequest()->getRawBody(), true);
-        $lastGroupId = Mage::getModel('outlook/event')->getCollection()
-            ->setOrder('group_id', 'DESC')
-            ->getFirstItem()
-            ->getGroupId();
-
-        $newGroupId = ($lastGroupId) ? $lastGroupId + 1 : 1;
-        if (isset($params['events']) && is_array($params['events'])) {
-            try {
-                foreach ($params['events'] as $eventData) {
-
-                    foreach ($eventData as $_conditions) {
-                        $eventModel = Mage::getModel('outlook/event');
-                        $_conditions['group_id'] = $newGroupId;
-                        $eventModel->setData($_conditions);
-                        $eventModel->save();
-                    }
-                    $newGroupId++;
-                }
-                $this->getResponse()->setBody(json_encode(['status' => 'success', 'message' => 'Events saved successfully']));
-            } catch (Exception $e) {
-                Mage::logException($e);
-                $this->getResponse()->setBody(json_encode(['status' => 'error', 'message' => $e->getMessage()]));
-            }
-        } else {
-            $this->getResponse()->setBody(json_encode(['status' => 'error', 'message' => 'Invalid data']));
-        }
     }
 
 

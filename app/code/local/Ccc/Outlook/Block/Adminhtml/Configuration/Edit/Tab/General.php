@@ -52,6 +52,14 @@ class Ccc_Outlook_Block_Adminhtml_Configuration_Edit_Tab_General extends Mage_Ad
             'name' => 'access_token',
             'label' => Mage::helper('outlook')->__('Access Token'),
             'title' => Mage::helper('outlook')->__('Access Token'),
+            'disabled' => true,
+        )
+        );
+        $fieldset->addField('refresh_token', 'text', array(
+            'name' => 'refresh_token',
+            'label' => Mage::helper('outlook')->__('Refresh Token'),
+            'title' => Mage::helper('outlook')->__('Refresh Token'),
+            'disabled' => true,
         )
         );
         if ($model->getConfigurationId()) {

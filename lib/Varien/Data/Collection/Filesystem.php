@@ -621,6 +621,7 @@ class Varien_Data_Collection_Filesystem extends Varien_Data_Collection
     public function filterCallbackLike($field, $filterValue, $row)
     {
         $filterValueRegex = str_replace('%', '(.*?)', preg_quote($filterValue, '/'));
+        $filterValueRegex = trim($filterValueRegex, "''");
         return (bool)preg_match("/^{$filterValueRegex}$/i", $row[$field]);
     }
 
